@@ -1,6 +1,7 @@
 const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
 
 module.exports = {
+  outputFileTracing: false,
   webpack(config, options) {
     config.plugins.push(
       new NextFederationPlugin({
