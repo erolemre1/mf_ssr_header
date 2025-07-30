@@ -21,6 +21,17 @@ module.exports = {
             requiredVersion: false,
           },
         },
+          nextConfig: {
+    experimental: {
+      outputFileTracingExcludes: {
+        '*': [
+          './*.js', 
+          './node_modules/@module-federation/*',
+          './node_modules/next/dist/compiled/@vercel/nft/**',
+        ],
+      },
+    },
+  },
       })
     );
     return config;
