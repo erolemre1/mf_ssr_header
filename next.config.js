@@ -8,7 +8,7 @@ module.exports = {
         name: 'header_app',
         filename: 'static/chunks/remoteEntry.js',
         exposes: {
-          './Header': './components/Header.js',
+          './Header': './components/Header.jsx',
         },
         shared: {
           react: {
