@@ -16,5 +16,9 @@
   },
   "devDependencies": {
     "webpack": "^5.101.0"
-  }
+  },
+  "engines": {
+  "node": ">=18.0.0"
 }
+}
+
