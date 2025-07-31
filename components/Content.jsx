@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const genders = [
   { label: 'Kadın', image: 'https://dfcdn.defacto.com.tr/Mobile/kadin-1437x2154_fdf8bb70-a56a-4664-ae51-c1aed962d88e_af563d82-0422-4238-a80b-d2d5086bd3b2_DI_316.jpg' },
@@ -40,12 +40,13 @@ const labelBoxStyle = {
 };
 
 const Widget = () => {
-  useEffect(() => {
-    document.body.style.margin = '0';
-    document.body.style.fontFamily = 'Arial, sans-serif';
-    document.body.style.backgroundColor = '#f5f5f5';
-    // istediğin diğer stiller
-  }, []);
+    if (typeof window === 'undefined') return null;
+  // useEffect(() => {
+  //   document.body.style.margin = '0';
+  //   document.body.style.fontFamily = 'Arial, sans-serif';
+  //   document.body.style.backgroundColor = '#f5f5f5';
+  //   // istediğin diğer stiller
+  // }, []);
   return (
     <div style={containerStyle}>
       {genders.map((gender, index) => (

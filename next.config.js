@@ -5,10 +5,11 @@ module.exports = {
   webpack(config, options) {
     config.plugins.push(
       new NextFederationPlugin({
-        name: 'header_app',
+        name: 'content_app',
+          library: { type: 'global', name: 'content_app' }, 
         filename: 'static/chunks/remoteEntry.js',
         exposes: {
-          './Header': './components/Header.jsx',
+          './Content': './components/Content.jsx',
         },
         shared: {
           react: {
